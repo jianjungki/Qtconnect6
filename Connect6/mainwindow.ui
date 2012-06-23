@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>新的游戏</string>
+    </property>
+    <addaction name="playwhite"/>
+    <addaction name="playblack"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>日志记录</string>
+    </property>
+    <addaction name="showboard"/>
+    <addaction name="saveboard"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="document"/>
+    <addaction name="about"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="playwhite">
+   <property name="text">
+    <string>电脑白子</string>
+   </property>
+  </action>
+  <action name="playblack">
+   <property name="text">
+    <string>电脑黑子</string>
+   </property>
+  </action>
+  <action name="showboard">
+   <property name="text">
+    <string>载入棋盘记录</string>
+   </property>
+  </action>
+  <action name="saveboard">
+   <property name="text">
+    <string>保存棋盘记录</string>
+   </property>
+  </action>
+  <action name="document">
+   <property name="text">
+    <string>帮助文档</string>
+   </property>
+  </action>
+  <action name="about">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

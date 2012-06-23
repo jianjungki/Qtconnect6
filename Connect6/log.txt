@@ -1,0 +1,20 @@
+很容易搞定，mainWindow 是一个QWidget。
+// 设置背景色为蓝色
+mainWindow.setStyleSheet("background-color:blue;");
+
+// 设置背景图片为bg.png
+mainWindow.setObjectName("mainWindow");
+mainWindow.setStyleSheet("#mainWindow{border-image:url(:/image/bg.png);}");
+
+这里要注意，ObjectName 并非可有可无，如果不使用它会导致该widget 的所有子控件也会有相同的背景。不使用"background-image"的理由是"border-image"可以自动填充。
+
+如果想恢复默认背景，可以调用
+mainWindow.setStyleSheet(0); 
+
+:/image/bg.png  前面有冒号说明它是qrc 中定义的资源；顺便说一下如何添加和编辑qrc 文件。
+在工程上右键点击“Add New...”，然后 => "Qt" => "Qt Resource File" ，随便起个名字 => "Next" => "Finish"，添加qrc 文件完毕。
+接下来添加图片资源，选中刚才添加的qrc 文件，"Add Prefix"，建议把"Prefix" 设为"/"；然后"Add Files"，把图片添加到资源文件中。
+
+当然，也可以从磁盘上直接载入图片。与使用资源文件中定义的图片相比，时间开销大，但空间开销小，同时也更灵活一些，例如显示下载的图片。
+mainWindow.setObjectName("mainWindow"); 
+mainWindow.setStyleSheet("#mainWindow{border-image:url(c:/downloads/myapp/image/bg.png);}");
